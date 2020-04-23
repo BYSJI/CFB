@@ -1,0 +1,59 @@
+page-login {
+    ion-content{
+        background-image: url(../../assets/imgs/login-bg.jpg)!important;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        text-align: center;
+        .scroll-content{
+            overflow:hidden;
+        }
+        .login-window{
+            width:300px;
+            margin:0 auto;
+            position: relative;
+            ion-img{
+                background-color: transparent;
+                width: 200px;
+                height: 200px;
+            }
+            .yhbox{
+                width: 270px;
+                position: relative;
+                .icon-yonghu{
+                    font-size: 25px;
+                    color: #3b064d;
+                    position: absolute;
+                    left: 8px;
+                    top: 8px;
+                }
+                .yonghu{
+                    padding-left: 30px;
+                    border: 1px solid #4b4b4b;
+                    border-radius: 10px;
+                }
+            }
+            .pwdbox{
+                width: 270px;
+                position: relative;
+                margin: 5px 0 20px 0;
+                .icon-mima{
+                    font-size: 25px;
+                    color: #3b064d;
+                    position: absolute;
+                    left: 8px;
+                    top: 8px;
+                }
+                .pwd{
+                    padding-left: 30px;
+                    border: 1px solid #4b4b4b;
+                    border-radius: 10px;
+                }
+            }
+            button{
+                background-color: #3b064d;
+            }
+        }
+    }
+    
+}

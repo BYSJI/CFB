@@ -1,0 +1,21 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content padding>
+
+  <div class="box">
+    <div class="regi">
+      <h3>注 册</h3>
+    </div>
+    <ion-input type="tel" name="tel "  maxlength="11" minlength="11" [(ngModel)]="tel" placeholder="手机号"></ion-input>
+    <ion-input type="password" name="pwd" [(ngModel)]="pwd" placeholder="密码"></ion-input>
+    <ion-input type="password" name="repwd" [(ngModel)]="repwd" placeholder="确认密码"></ion-input>
+    <button ion-button round block (click)="submit()">注册</button>
+    <p text-center (click)="goLogin()">已有账号？立即登录</p>
+  </div>
+
+</ion-content>
