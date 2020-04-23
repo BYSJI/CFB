@@ -1,0 +1,7 @@
+{
+	"host":"localhost",
+	"user":"root",
+	"password":"gym210820",
+	"database":"recipes",
+	"supportBigNumbers":true
+}
