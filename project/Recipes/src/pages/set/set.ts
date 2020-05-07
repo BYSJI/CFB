@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component ,NgZone, ViewChild} from '@angular/core';
+import { NavController, Events, App, IonicPage } from 'ionic-angular';
+import { HttpClient } from '@angular/common/http';
 
 /**
  * Generated class for the SetPage page.
@@ -15,11 +16,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SetPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  className;
+
+  constructor(public navCtrl: NavController, public http: HttpClient, 
+public events:Events,
+public zone: NgZone,
+    public app: App ) {
+    
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SetPage');
+    this.http.get("/api/set").subscribe(data=>{
+      this.className = data;
+    })
   }
 
 }

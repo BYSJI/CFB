@@ -16,6 +16,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+import { ImagePicker } from '@ionic-native/image-picker';
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { HttpModule } from '@angular/http';
     BrowserModule,
     HttpModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{
+      tabsHideOnSubPages:'true'  //隐藏全部子页面tabs
+    }),
     IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
@@ -49,6 +53,8 @@ import { HttpModule } from '@angular/http';
   providers: [
     StatusBar,
     SplashScreen,
+    ImagePicker,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

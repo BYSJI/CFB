@@ -1,11 +1,33 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
+  <ion-navbar color="wh">
+    <ion-title>我的页面</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
 
+<ion-content padding>
+  <h1>我的主页</h1>
+  <div class="me">
+    <div class="avatar">豆</div>
+    <div class="message">
+      <p class="name">豆荚</p>
+      <button>编辑个人资料</button>
+    </div>
+  </div>
+  <ul class="navlist">
+    <li (click)="isClick(0)" [class.first]="isActive==0">食谱</li>
+    <li (click)="isClick(1)" [class.first]="isActive==1">烹饪书</li>
+    <li (click)="isClick(2)" [class.first]="isActive==2">最爱</li>
+  </ul>
+  <div [ngSwitch]="isActive">
+    <div *ngSwitchCase="0">
+      <img src="../../assets/imgs/cook.jpg">
+    </div>
+    <div *ngSwitchCase="1">
+      <img src="../../assets/imgs/book.jpg">
+    </div>
+    <div *ngSwitchCase="2">
+      <img src="../../assets/imgs/love.jpg">
+    </div>
+  </div>
 </ion-content>

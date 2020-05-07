@@ -1,3 +1,62 @@
 page-about {
+    .toolbar-title-md{
+        font-size: 18px;
+        text-align: center;
+        font-weight: bolder;
+    }
+    .toolbar-md{
+        min-height: 41px;
+    }
+    ion-content{
+        width: 100%;
+        height: 100%;
+        .me{
+            width: 100%;
+            height: 20%;
+            .avatar{
+                width: 90px;
+                height: 90px;
+                margin: 10px 10px 0px 0px;
+                background-color: #ffeb3b;
+                float: left;
+                font-weight: bolder;
+                font-size: 56px;
+                text-align: center;
+                color: #e7e7e7;
+            }
+            .name{
+                color: #383838;
+                font-weight: bolder;
+                font-size: medium;
+            }
+            button{
+                background-color: #3b064d;
+                font-weight: bolder;
+                color: #e7e7e7;
+                width: 100px;
+                height: 35px;
+                text-align: center;
+                border-radius: 10px;
+            }
+        }
+        .navlist{
+            padding: 0px;
+            width: 100%;
+            height: 33px;
+            float: left;
+            border-top: 1px solid #e7e7e7;
+            border-bottom: 1px solid #e7e7e7;
+        }
+        .navlist li{
+            width: 33%;
+            line-height: 30px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .first{
+            border-bottom: 2px solid #3b064d;
+            color: #3b064d;
+        }
+    }
 
 }

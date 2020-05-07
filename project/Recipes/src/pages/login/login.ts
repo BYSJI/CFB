@@ -56,15 +56,17 @@ export class LoginPage {
       });
     }
   }
+  
   goHome() {
-    // this.http.post('/api/login/count',{'uid':this.uid},{headers:this.headers}).subscribe(data=>{
-    //   if(!data){
-    //     let profileModal = this.modal.create('StartestPage');
-    //     profileModal.present();
-    //   }
-    // });
+    this.http.post('/api/login/count',{'uid':this.uid},{headers:this.headers}).subscribe(data=>{
+      if(!data){
+        let profileModal = this.modal.create('StartestPage');
+        profileModal.present();
+      }
+    });
     this.app.getRootNavs()[0].setRoot(TabsPage);
   }
+
   presentPrompt(str) {
     let alert = this.alertCtrl.create({
       title: '登录失败',

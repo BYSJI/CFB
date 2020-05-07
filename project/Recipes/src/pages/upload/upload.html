@@ -5,17 +5,81 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>upload</ion-title>
+    <ion-title>
+      创建菜谱
+    </ion-title>
+    <ion-buttons end (click)="goHome()">
+      <button ion-button icon-only>
+        取消
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
+<ion-content>
+  <ion-slides pager>
+    <ion-slide id="s1">
+      <div padding class="loadone">
+        <p>
+          给你的菜谱命名
+          &nbsp;
+          <span style="color: brown;">*</span>
+        </p>
+        <input type="text" maxlength="20" required="required" placeholder="菜谱名">
+        <!-- <ion-input type="text" maxlength="20" required="required" placeholder="菜谱名" [(ngModel)]="title"></ion-input> -->
+        <button>保存</button>
+        <p>
+          添加食谱图片
+        </p>
+        <div class="pic">
+          <ion-icon name="logo-instagram">
+          </ion-icon>
+          <p>上传成品照片，你也可以稍后完成此步骤！</p>
+        </div>
+      </div>
+    </ion-slide>
 
-<ion-content padding>
+    <ion-slide id="s2">
+      <div padding class="loadone">
+        <p>
+          分量类型
+          &nbsp;
+          <span style="color: brown;">*</span>
+          <span class="pernum">
+            <input type="number" maxlength="2" minlength="1" min="1" placeholder="?" required>&nbsp;人
+          </span>
+        </p>
+        <p class="explain">
+          选择人数（够几人吃的量）或者切分的份数（比如几块蛋糕）
+        </p>
+        <HR align=center width=100% color=#e5e5e5 SIZE=1>
+        <p>难度</p>
+        
+        <p>食材</p>
+        <p>步骤</p>
+        <p>分类</p>
+        <p>作者的话</p>
+      </div>      
+    </ion-slide>
 
-  <button (click)='goNext()'>下一步</button>
-  <button (click)='close()'>上一步</button>
+    <ion-slide id="s3">
+      <p>分量类型</p>
+      <p>难度</p>
+      <p>食材</p>
+      <p>步骤</p>
+      <p>分类</p>
+      <p>作者的话</p>
+    </ion-slide>
 
+    <ion-slide id="s4">
+      <p>分量类型</p>
+      <p>难度</p>
+      <p>食材</p>
+      <p>步骤</p>
+      <p>分类</p>
+      <p>作者的话</p>
+      <button (click)='goNext()'>下一步</button>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
